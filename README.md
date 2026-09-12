@@ -1,132 +1,64 @@
+# Análise de dados da NBA com SQL
 
-<h1 align="center"> Projeto Final M3 - Analise de Dados - NBA 🏀 </h1>
+Projeto acadêmico desenvolvido em equipe no módulo 3 da Resilia, com exploração de estatísticas da NBA por meio de SQL e apresentação dos resultados. Este repositório preserva os arquivos do trabalho original e organiza sua leitura como parte do portfólio de Rafael Peruzini.
 
+## Material disponível
 
-<p align="center">
-  <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/>
-   
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
-</p>
+| Arquivo ou pasta | Conteúdo |
+| --- | --- |
+| [nba.sql](nba.sql) | Consultas exploratórias originais sobre jogadores, minutos, assistências e equipes |
+| [NBA.pptx](NBA.pptx) | Apresentação produzida para o projeto |
+| `queries/` e `tables/` | Pastas do projeto original; atualmente contêm apenas arquivos marcadores |
+| `Link do trello` | Referência ao quadro utilizado na organização do trabalho |
 
-> Status do Projeto: :heavy_check_mark: Concluído
+O repositório contém as consultas e a apresentação, mas não contém os CSVs nem o script de criação das tabelas. Não há arquivo Power BI publicado nesta cópia do projeto.
 
-## Tópicos 
+## Perguntas exploradas
 
-:small_blue_diamond: [Descrição do projeto](#sobre)
+- Como comparar o tempo em quadra dos jogadores?
+- Quais jogadores se destacam em assistências?
+- Como relacionar estatísticas de equipes e seus cadastros?
+- Como organizar consultas SQL e comunicar uma análise em equipe?
 
-:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+## Tecnologias
 
-:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+SQL com sintaxe de MySQL, MySQL Workbench e Git/GitHub. As consultas referenciam as tabelas `games_details`, `players`, `rankings`, `teams` e `games`.
 
-## Sobre
+## Examinar o projeto
 
-<p align="justify">
-Criação de dashboard através de análise de base de dados feita usando a 
-linguagem SQL 
-</p>
-
-
-## Pré-requisitos
-
-- :warning: [MySQL](https://dev.mysql.com/downloads/workbench/) * Ferramenta usada e recomendada pela squad
-- :warning: [Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git) *Site oficial do GIT
-- :warning: [Git](https://www.hostinger.com.br/tutoriais/tutorial-do-git-basics-introducao) * Tutorial completo da Hostinger
-
-.
-.
-.
-
-
-## Como instalar o MySQL Workbench :arrow_forward:
-
-[Instalação MySQL](https://dev.mysql.com/downloads/workbench/)
-
-```
-Siga as instruções da página oficial
-
-```
-[Em caso de dúvidas na instalação acesse o tutorial do nosso parceiro - HOSTINGER Brasil ](https://youtu.be/zpssr3u1EO8) 
-
-**Dica: Durante a instalação haverá uma etapa para definição de senha do administrador. Após defini-la, guarde-a em um lugar seguro pois será necessária para efetuar a conexão com o banco de dados**
-
-
-.
-.
-.
-
-
-## Como baixar o repositório com os arquivos CSV contendo os dados e algumas queries de exemplo :arrow_forward:
-
-### Caso tenha o git instalado ...Abra o terminal, clone o projeto para a pasta desejada. Use o comando : 
-
-```
-git clone https://github.com/maurocmendes/M3-NBA-DataAnalytics-SQL.git
+```bash
+git clone https://github.com/Peruzini/M3-NBA-DataAnalytics-SQL.git
+cd M3-NBA-DataAnalytics-SQL
 ```
 
-### Caso não tenha o GIT instalado :
-- Acesse a página do repositório[](https://github.com/maurocmendes/M3-NBA-DataAnalytics-SQL) 
-- Clique no botão verde escrito 'CODE' e depois clique em 'DOWNLOAD ZIP' para baixar a pasta compactada contendo os arquivos do repositório
-- Extraia o arquivo compactado em um diretório de sua preferência
+Comece pela apresentação e pelo arquivo `nba.sql`. Para executar as consultas, é necessário obter a base usada no trabalho, conferir sua origem e permissão de uso, criar as tabelas e importar os dados em uma instância de MySQL. O Workbench é o cliente de acesso; ele depende de um servidor de banco de dados disponível.
 
-**Dica: Esse método manual não permite que você acompanhe/atualize os novos arquivos e atualiações do repositório oficial. Sempre que possível USE O GIT para clonar e consumir repositórios **
+A documentação original apontava ao [repositório de Mauro Mendes](https://github.com/maurocmendes/M3-NBA-DataAnalytics-SQL). Esse link é mantido como referência histórica da equipe, sem pressupor que todos os dados continuem disponíveis nele.
 
+## Cuidados na interpretação das consultas originais
 
-.
-.
-.
+As consultas foram preservadas como material acadêmico. Antes de reutilizá-las em uma análise atual, revise:
 
+- O tipo de `MIN`: uma duração em texto precisa ser convertida antes de comparar ou calcular médias.
+- A granularidade e as chaves de agrupamento: selecionar jogador e agrupar apenas por assistências pode produzir resultados inválidos ou ambíguos.
+- A tabela de classificação: contar registros de `W` não equivale a somar vitórias, e fotografias acumuladas de classificação não devem ser somadas indiscriminadamente.
+- As junções por jogador: se o cadastro tiver várias temporadas por jogador, uma junção somente por ID pode multiplicar linhas.
 
-## Iniciando/Configurando banco de dados
+Não foram publicados novos resultados numéricos nesta revisão, pois a base original não está incluída no repositório. Os [estudos demonstrativos de BI](https://github.com/Peruzini/NOVOREPOSIT) apresentam exemplos reproduzíveis com dados sintéticos e validações.
 
-Se for necessário configurar algo antes de iniciar o banco de dados insira os comandos a serem executados 
+## Equipe do projeto original
 
+- [Yasmin Ramos](https://github.com/yasminramos)
+- [Breno Garduci](https://github.com/Garduciz)
+- [Rafael Peruzini](https://github.com/Peruzini)
+- [Tulio Roberto](https://github.com/tuliorsc10)
+- [Mauro Mendes](https://github.com/maurocmendes)
 
-.
-.
-.
+Os créditos do trabalho em equipe foram preservados. Esta página não atribui a execução integral do projeto a um único participante.
 
-## Linguagens, dependencias e libs utilizadas :books:
+## Referências
 
-- [SQL](https://www.devmedia.com.br/guia/guia-completo-de-sql/38314)
+- [NBA Stats](https://www.nba.com/stats/)
+- [Documentação do MySQL](https://dev.mysql.com/doc/)
 
-
-.
-.
-.
-
-## Tarefas em aberto
-
-Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementadas na sua aplicação
-
-:memo: [Análise de Dados com Python](https://github.com/maurocmendes/M3-NBA-DataAnalytics-PYTHON)
-
-:memo: [Análise de Dados com R](https://github.com/maurocmendes/M3-NBA-DataAnalytics-R)
-
-:memo: [Análise de Dados com M e DAX - PowerBI](https://github.com/maurocmendes/M3-NBA-DataAnalytics-POWERBI)
-
-.
-.
-.
-
-## Desenvolvedores/Contribuintes :octocat:
-
-- Yasmin Ramos [@yasminramos](https://www.github.com/yasminramos)
-- Breno Garduci [@Garduciz](https://www.github.com/Garduciz)
-- Rafael Peruzini [@yasminramos](https://www.github.com/yasminramos)
-- Tulio Roberto [@tuliorsc10](https://www.github.com/tuliorsc10)
-- Mauro Mendes [@maurocmendes](https://www.github.com/maurocmendes)
-
-
-## Referência
-
- - [NBA Advanced Stats (Inglês) ](https://www.nba.com/stats/)
- - [MySQL Documentation (Inglês)](https://dev.mysql.com/doc/)
-
-
-## Licença 
-
-The [MIT License]() (MIT)
-
-Copyright :copyright: 2022 - Análise de Dados usando SQL
-
+O README original mencionava MIT, mas esta cópia não inclui um arquivo de licença. Confirme os termos aplicáveis antes de redistribuir materiais de terceiros.
