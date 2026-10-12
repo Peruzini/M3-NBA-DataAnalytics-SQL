@@ -44,7 +44,7 @@ As consultas foram preservadas como material acadêmico. Antes de reutilizá-las
 - A tabela de classificação: contar registros de `W` não equivale a somar vitórias, e fotografias acumuladas de classificação não devem ser somadas indiscriminadamente.
 - As junções por jogador: se o cadastro tiver várias temporadas por jogador, uma junção somente por ID pode multiplicar linhas.
 
-Não foram publicados novos resultados numéricos nesta revisão, pois a base original não está incluída no repositório. Os [estudos demonstrativos de BI](https://github.com/Peruzini/NOVOREPOSIT) apresentam exemplos reproduzíveis com dados sintéticos e validações.
+Não foram publicados novos resultados numéricos nesta revisão, pois a base original não está incluída no repositório. Os [estudos demonstrativos de BI](https://github.com/Peruzini/bi-analytics-portfolio) apresentam exemplos reproduzíveis com dados sintéticos e validações.
 
 ## Equipe do projeto original
 
